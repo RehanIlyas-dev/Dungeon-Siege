@@ -1,0 +1,246 @@
+<mxfile host="app.diagrams.net" type="device">
+  <diagram id="game-workflow-compact" name="Dungeon Siege Workflow">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="1800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Styles -->
+        <mxCell id="style_title" value="" style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;fontColor=#333333;" vertex="1" parent="0" />
+        <mxCell id="style_phase" value="" style="text;html=1;fontSize=14;fontStyle=5;align=left;fontColor=#666666;" vertex="1" parent="0" />
+        <mxCell id="style_green" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;fontSize=10;" vertex="1" parent="0" />
+        <mxCell id="style_blue" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;fontSize=10;" vertex="1" parent="0" />
+        <mxCell id="style_purple" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#000000;fontSize=10;" vertex="1" parent="0" />
+        <mxCell id="style_yellow" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;fontSize=10;" vertex="1" parent="0" />
+        <mxCell id="style_red" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;fontSize=10;" vertex="1" parent="0" />
+
+        <!-- ========== TITLE ========== -->
+        <mxCell id="title" value="DUNGEON SIEGE WORKFLOW" style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="250" y="10" width="400" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- ========== PHASE 1: STARTUP ========== -->
+        <mxCell id="phase1" value="PHASE 1: STARTUP" style="text;html=1;fontSize=12;fontStyle=1;align=left;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="20" y="60" width="150" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="start" value="START (Program.cs)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="90" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="init_form" value="Init Form1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="210" y="90" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="load_tex" value="Load Textures" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="370" y="90" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="create_p" value="Create Player" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="530" y="90" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="create_gm" value="Create GameMgr" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="530" y="150" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="setup_t" value="Setup Timer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="370" y="150" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="start_t" value="gameTimer.Start()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="210" y="150" width="130" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" edge="1" parent="1" source="start" target="init_form"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="init_form" target="load_tex"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="load_tex" target="create_p"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="create_p" target="create_gm"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="create_gm" target="setup_t"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="setup_t" target="start_t"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- ========== PHASE 2: MAIN MENU ========== -->
+        <mxCell id="phase2" value="PHASE 2: MAIN MENU" style="text;html=1;fontSize=12;fontStyle=1;align=left;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="20" y="200" width="150" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="main_menu" value="MAIN MENU" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#000000;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="210" y="230" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="start_t" target="main_menu"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="menu_click" value="Menu Click?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="220" y="290" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="main_menu" target="menu_click"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="toggle_diff" value="Toggle Difficulty" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="300" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="Diff" edge="1" parent="1" source="menu_click" target="toggle_diff"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e9b" edge="1" parent="1" source="toggle_diff" target="main_menu">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="105" y="250" /></Array></mxGeometry>
+        </mxCell>
+
+        <mxCell id="exit_app" value="EXIT" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="380" y="300" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="Exit" edge="1" parent="1" source="menu_click" target="exit_app"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="resume_game" value="Resume Game" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="110" y="380" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="Continue" edge="1" parent="1" source="menu_click" target="resume_game"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="new_game" value="NEW GAME" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="330" y="380" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="New" edge="1" parent="1" source="menu_click" target="new_game"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- ========== PHASE 3: GAME INIT ========== -->
+        <mxCell id="phase3" value="PHASE 3: GAME INIT" style="text;html=1;fontSize=12;fontStyle=1;align=left;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="20" y="440" width="150" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="reset_stats" value="Reset Stats" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="330" y="460" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="new_game" target="reset_stats"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="set_kill" value="Set Kill Limit" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="480" y="460" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="reset_stats" target="set_kill"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="clear_en" value="Clear Enemies" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="480" y="520" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="set_kill" target="clear_en"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="spawn_first" value="First Spawn" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="330" y="520" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="clear_en" target="spawn_first"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- ========== PHASE 4: PLAYING / GAME LOOP ========== -->
+        <mxCell id="phase4" value="PHASE 4: GAME LOOP (16ms tick)" style="text;html=1;fontSize=12;fontStyle=1;align=left;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="20" y="580" width="200" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="playing" value="PLAYING STATE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="330" y="600" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" edge="1" parent="1" source="spawn_first" target="playing"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e17b" edge="1" parent="1" source="resume_game" target="playing">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="165" y="620" /></Array></mxGeometry>
+        </mxCell>
+
+        <mxCell id="loop_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#999999;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="650" width="560" height="430" as="geometry" />
+        </mxCell>
+
+        <mxCell id="check_over" value="GameOver?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="335" y="670" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="1" source="playing" target="check_over"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="compute_bounds" value="Compute Bounds" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="330" y="750" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e19" value="No" edge="1" parent="1" source="check_over" target="compute_bounds"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="player_move" value="Player Move" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="330" y="810" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e20" edge="1" parent="1" source="compute_bounds" target="player_move"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="enemy_update" value="Enemy Update" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="330" y="870" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e21" edge="1" parent="1" source="player_move" target="enemy_update"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="collision" value="Collision Checks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="330" y="930" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e23" edge="1" parent="1" source="enemy_update" target="collision"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="spawn_check" value="Spawn?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="340" y="990" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e24" edge="1" parent="1" source="collision" target="spawn_check"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="spawn_enemy" value="Spawn New" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="470" y="1000" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e25" value="Yes" edge="1" parent="1" source="spawn_check" target="spawn_enemy"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="render" value="Render Frame" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="140" y="1000" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e26" value="No" edge="1" parent="1" source="spawn_check" target="render"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e26b" edge="1" parent="1" source="spawn_enemy" target="render">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="520" y="1060" /><mxPoint x="195" y="1060" /></Array></mxGeometry>
+        </mxCell>
+
+        <mxCell id="e_loop" edge="1" parent="1" source="render" target="playing">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="195" y="620" /></Array></mxGeometry>
+        </mxCell>
+
+        <!-- ========== PHASE 5: GAME OVER ========== -->
+        <mxCell id="phase5" value="PHASE 5: GAME OVER" style="text;html=1;fontSize=12;fontStyle=1;align=left;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1120" width="150" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="health_check" value="HP &lt;= 0?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="480" y="1140" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e27" value="Yes" edge="1" parent="1" source="check_over" target="health_check">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="525" y="700" /></Array></mxGeometry>
+        </mxCell>
+
+        <!-- Defeat -->
+        <mxCell id="defeat_form" value="DEFEAT FORM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="340" y="1210" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e29" value="Yes" edge="1" parent="1" source="health_check" target="defeat_form"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="395" y="1170" /></Array></mxGeometry>
+        </mxCell>
+
+        <mxCell id="defeat_choice" value="Choice?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="350" y="1280" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e31" edge="1" parent="1" source="defeat_form" target="defeat_choice"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- Victory -->
+        <mxCell id="victory_form" value="VICTORY FORM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="600" y="1210" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e32" value="No" edge="1" parent="1" source="health_check" target="victory_form"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="655" y="1170" /></Array></mxGeometry>
+        </mxCell>
+
+        <mxCell id="victory_choice" value="Choice?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="610" y="1280" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e34" edge="1" parent="1" source="victory_form" target="victory_choice"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- ========== PHASE 6: END ACTIONS ========== -->
+        <mxCell id="phase6" value="PHASE 6: END ACTIONS" style="text;html=1;fontSize=12;fontStyle=1;align=left;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1370" width="150" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="play_again" value="PLAY AGAIN" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="470" y="1360" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e35" value="Retry" edge="1" parent="1" source="defeat_choice" target="play_again"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="525" y="1310" /></Array></mxGeometry></mxCell>
+        <mxCell id="e36" value="Retry" edge="1" parent="1" source="victory_choice" target="play_again"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="525" y="1310" /></Array></mxGeometry></mxCell>
+
+        <mxCell id="return_menu" value="TO MAIN MENU" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="470" y="1440" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e38" value="Menu" edge="1" parent="1" source="defeat_choice" target="return_menu"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="395" y="1460" /></Array></mxGeometry></mxCell>
+        <mxCell id="e39" value="Menu" edge="1" parent="1" source="victory_choice" target="return_menu"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="655" y="1460" /></Array></mxGeometry></mxCell>
+
+        <mxCell id="e37" edge="1" parent="1" source="play_again" target="new_game">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="750" y="1380" /><mxPoint x="750" y="400" /></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="e40" edge="1" parent="1" source="return_menu" target="main_menu">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="790" y="1460" /><mxPoint x="790" y="250" /></Array></mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
