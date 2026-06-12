@@ -1,0 +1,44 @@
+## Ignore Visual Studio temporary files, build results, and user settings
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Mono auto generated files
+mono_crash.*
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Release]/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Log]/
+[Logs]/
+
+# Visual Studio 2015/2017 cache/options directory
+.vs/
+
+# Visual Studio Code directory
+.vscode/
+
+# Rider/Resharper directory
+.idea/
+
+# Tooling
+_ReSharper*/
+*.[Re]Sharper.user
+
+# Operating System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
